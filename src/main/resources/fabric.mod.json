@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "education-mod",
+	"version": "1.0.0",
+	"name": "Java Education Edition",
+	"description": "Port of Education Edition additions to Java Edition",
+	"authors": [
+		"8-NabBit"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC BY-SA 4.0",
+	"icon": "assets/education-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.education.JavaEducation"
+		],
+		"client": [
+			"com.education.client.JavaEducationClient"
+		],
+		"fabric-datagen": [
+			"com.education.client.JavaEducationDataGenerator"
+		]
+	},
+	"mixins": [
+		"education-mod.mixins.json",
+		{
+			"config": "education-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
