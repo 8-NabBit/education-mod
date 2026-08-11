@@ -2,6 +2,7 @@ package com.education;
 
 import com.education.item.ModItems;
 import com.education.creativemodetab.ModCreativeModeTabs;
+import com.education.entity.ModEntities;
 
 import net.fabricmc.api.ModInitializer;
 
@@ -20,6 +21,7 @@ public class JavaEducation implements ModInitializer {
 		LOGGER.info("Initializing Java Education Edition Mod");
 		ModItems.initialize();
 		ModCreativeModeTabs.register();
+		ModEntities.initialize();
 	}
 
 	public static Identifier id(String path) {
