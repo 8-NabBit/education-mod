@@ -10,7 +10,7 @@ import java.util.function.Function;
 
 public class ModItems {
 
-	public static final Item ICE_BOMB = register(ModItemIds.ICE_BOMB, IceBombItem::new, new IceBombItem.Properties().stacksTo(16));
+	public static final Item ICE_BOMB = register(ModItemIds.ICE_BOMB, IceBombItem::new, new IceBombItem.Properties().stacksTo(16).useCooldown(0.5F));
 
 	public static Item register(ResourceKey<Item> itemKey, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {
 		Item item = itemFactory.apply(settings.setId(itemKey));
