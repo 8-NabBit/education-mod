@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
             .title(Component.translatable("creative_tab.education-mod"))
             .displayItems((params, output) -> {
                 output.accept(ModItems.ICE_BOMB);
+                output.accept(ModItems.RAPID_FERTILIZER);
             })
             .build();
 

@@ -5,12 +5,14 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import com.education.item.icebomb.IceBombItem;
+import com.education.item.rapidfertilizer.RapidFertilizerItem;
 
 import java.util.function.Function;
 
 public class ModItems {
 
 	public static final Item ICE_BOMB = register(ModItemIds.ICE_BOMB, IceBombItem::new, new IceBombItem.Properties().stacksTo(16).useCooldown(0.5F));
+	public static final Item RAPID_FERTILIZER = register(ModItemIds.RAPID_FERTILIZER, RapidFertilizerItem::new, new RapidFertilizerItem.Properties());
 
 	public static Item register(ResourceKey<Item> itemKey, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {
 		Item item = itemFactory.apply(settings.setId(itemKey));
