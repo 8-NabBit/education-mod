@@ -2,6 +2,10 @@
 A Fabric mod that ports Minecraft: Education exclusive features to Minecraft: Java Edition.
 
 ## Build
+**Linux:**
+```bash
+./gradlew build
+```
 **Windows:**
 ```bash
 ./gradlew.bat build
