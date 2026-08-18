@@ -1,12 +1,16 @@
 package com.education.mixin;
 
+import com.education.JavaEducation;
 import com.education.block.ModBlocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockState;
+
+import java.beans.JavaBean;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -30,8 +34,7 @@ public abstract class WaterFluidMixin {
             RandomSource random,
             CallbackInfo ci
     ) {
-        // Only affect water
-        if (!state.is(net.minecraft.world.level.block.Blocks.WATER)) {
+        if (!state.is(Blocks.WATER)) {
             return;
         }
 

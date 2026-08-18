@@ -24,13 +24,10 @@ public class HeatBlock extends Block {
             BlockPos pos,
             RandomSource random) {
 
-        JavaEducation.LOGGER.info("Heat block ticked at " + pos);
-
         for (int dx = -HEAT_RADIUS; dx <= HEAT_RADIUS; dx++) {
             for (int dy = -HEAT_RADIUS; dy <= HEAT_RADIUS; dy++) {
                 for (int dz = -HEAT_RADIUS; dz <= HEAT_RADIUS; dz++) {
 
-                    // Taxicab / Manhattan distance
                     if (Math.abs(dx) + Math.abs(dy) + Math.abs(dz) > HEAT_RADIUS) {
                         continue;
                     }
