@@ -18,9 +18,9 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 
 public class ModBlocks {
     public static final Block HEAT_BLOCK = registerBlock("heat_block", properties -> new HeatBlock(properties.strength(2.f)
-        .requiresCorrectToolForDrops().sound(SoundType.STONE).randomTicks()));
+        .requiresCorrectToolForDrops().sound(SoundType.STONE).randomTicks().noOcclusion()));
 
-        
+
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK,
             Identifier.fromNamespaceAndPath(JavaEducation.MOD_ID, name))));

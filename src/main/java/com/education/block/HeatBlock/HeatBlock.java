@@ -1,7 +1,5 @@
 package com.education.block.HeatBlock;
 
-import com.education.JavaEducation;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -54,17 +52,6 @@ public class HeatBlock extends Block {
                             }
                         }
                     }
-
-                    else if (targetState.is(Blocks.SNOW_BLOCK)) {
-                        if (random.nextFloat() < 0.20f) {
-                            level.setBlock(
-                                    targetPos,
-                                    Blocks.WATER.defaultBlockState(),
-                                    3
-                            );
-                        }
-                    }
-
                     else if (targetState.is(Blocks.ICE)) {
                         if (random.nextFloat() < 0.05f) {
                             level.setBlock(

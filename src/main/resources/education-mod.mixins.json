@@ -3,7 +3,7 @@
 	"package": "com.education.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
-		"WaterFluidMixin"
+		"ExampleMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
