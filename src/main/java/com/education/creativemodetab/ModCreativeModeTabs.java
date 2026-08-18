@@ -1,6 +1,7 @@
 package com.education.creativemodetab;
 
 import com.education.JavaEducation;
+import com.education.block.ModBlocks;
 
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.minecraft.core.Registry;
@@ -23,6 +24,7 @@ public class ModCreativeModeTabs {
             .displayItems((params, output) -> {
                 output.accept(ModItems.ICE_BOMB);
                 output.accept(ModItems.RAPID_FERTILIZER);
+                output.accept(ModBlocks.HEAT_BLOCK.asItem());
             })
             .build();
 

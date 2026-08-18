@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "education-mod:block/heat_0",
+    "south": "education-mod:block/heat_1",
+    "east": "education-mod:block/heat_2",
+    "west": "education-mod:block/heat_3",
+    "up": "education-mod:block/heat_4",
+    "down": "education-mod:block/heat_4",
+    "particle": "education-mod:block/heat_4"
+  }
+}
