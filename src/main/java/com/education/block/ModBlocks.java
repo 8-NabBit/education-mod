@@ -17,8 +17,9 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 
 
 public class ModBlocks {
-    public static final Block HEAT_BLOCK = registerBlock("heat_block", properties -> new HeatBlock(properties.strength(2.f)
+    public static final Block HEAT_BLOCK = registerBlock("heat_block", properties -> new HeatBlock(properties.strength(2.5f)
         .requiresCorrectToolForDrops().sound(SoundType.STONE).randomTicks().noOcclusion()));
+
     public static final Block ELEMENT_UNKNOWN = registerBlock("element_unknown", properties -> new Block(properties));
     public static final Block ELEMENT_H =  registerBlock("element_h",  properties -> new Block(properties));
     public static final Block ELEMENT_HE = registerBlock("element_he", properties -> new Block(properties));
