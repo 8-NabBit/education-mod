@@ -1,4 +1,4 @@
-package com.education.client.generator.modelprovider;
+package com.education.client.generator;
 
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
