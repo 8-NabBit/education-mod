@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "education-mod:block/material_reducer"
+    }
+  }
+}

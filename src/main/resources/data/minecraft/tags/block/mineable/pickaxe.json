@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "education-mod:heat_block"
+    "education-mod:heat_block",
+    "education-mod:material_reducer"
   ]
 }
