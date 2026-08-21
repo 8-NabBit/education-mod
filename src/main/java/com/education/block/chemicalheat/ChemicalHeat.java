@@ -1,4 +1,4 @@
-package com.education.block.HeatBlock;
+package com.education.block.chemicalheat;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -8,10 +8,10 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SnowLayerBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class HeatBlock extends Block {
+public class ChemicalHeat extends Block {
     private static final int HEAT_RADIUS = 2;
 
-    public HeatBlock(Properties properties) {
+    public ChemicalHeat(Properties properties) {
         super(properties);
     }
 
