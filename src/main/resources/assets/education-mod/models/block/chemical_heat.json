@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/block",
   "textures": {
-    "particle": "education-mod:block/heat_block",
-    "outer": "education-mod:block/heat_block",
-    "inner": "education-mod:block/heat_block"
+    "particle": "education-mod:block/chemical_heat",
+    "outer": "education-mod:block/chemical_heat",
+    "inner": "education-mod:block/chemical_heat"
   },
   "elements": [
     {

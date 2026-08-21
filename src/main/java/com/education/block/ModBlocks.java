@@ -2,7 +2,7 @@ package com.education.block;
 import java.util.function.Function;
 
 import com.education.JavaEducation;
-import com.education.block.HeatBlock.HeatBlock;
+import com.education.block.chemicalheat.ChemicalHeat;
 
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -17,7 +17,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 
 
 public class ModBlocks {
-    public static final Block HEAT_BLOCK = registerBlock("heat_block", properties -> new HeatBlock(properties.strength(2.5f)
+    public static final Block CHEMICAL_HEAT = registerBlock("chemical_heat", properties -> new ChemicalHeat(properties.strength(2.5f)
         .requiresCorrectToolForDrops().sound(SoundType.STONE).randomTicks().noOcclusion()));
 
     public static final Block ELEMENT_UNKNOWN = registerBlock("element_unknown", properties -> new Block(properties));
