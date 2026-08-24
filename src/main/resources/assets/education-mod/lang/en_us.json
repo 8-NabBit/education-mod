@@ -1,7 +1,7 @@
 {
     "item.education-mod.ice_bomb": "Ice Bomb",
     "item.education-mod.rapid_fertilizer": "Rapid Fertilizer",
-    "block.education-mod.heat_block": "Heat Block",
+    "block.education-mod.chemical_heat": "Heat Block",
     "block.education-mod.underwater_torch": "Underwater Torch",
     "creative_tab.education-mod": "Education Items",
     "block.education-mod.element_ac": "Actinium",

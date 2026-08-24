@@ -2,7 +2,8 @@ package com.education.block;
 import java.util.function.Function;
 
 import com.education.JavaEducation;
-import com.education.block.HeatBlock.HeatBlock;
+
+import com.education.block.chemicalheat.ChemicalHeat;
 import com.education.block.UnderwaterTorchBlock.UnderwaterTorchBlock;
 import com.education.block.UnderwaterWallTorchBlock.UnderwaterWallTorchBlock;
 
@@ -22,7 +23,7 @@ import net.minecraft.world.level.material.PushReaction;
 
 
 public class ModBlocks {
-    public static final Block HEAT_BLOCK = registerBlock("heat_block", properties -> new HeatBlock(properties.strength(2.5f)
+    public static final Block CHEMICAL_HEAT = registerBlock("chemical_heat", properties -> new ChemicalHeat(properties.strength(2.5f)
         .requiresCorrectToolForDrops().sound(SoundType.STONE).randomTicks().noOcclusion()));
 
     public static final Block UNDERWATER_TORCH = register(
