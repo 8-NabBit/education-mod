@@ -4,7 +4,10 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.model.ModelTemplates;
+
 import com.education.block.ModBlocks;
+import com.education.item.ModItems;
 
 public class EducationModelProvider extends FabricModelProvider {
 	public EducationModelProvider(FabricPackOutput output) {
@@ -136,6 +139,37 @@ public class EducationModelProvider extends FabricModelProvider {
 
 	@Override
 	public void generateItemModels(ItemModelGenerators itemModelGenerator) {
+		itemModelGenerator.generateFlatItem(ModItems.ALUMINIUM_OXIDE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.AMMONIA, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.BARIUM_SULFATE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.BENZENE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.BORON_TRIOXIDE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.CALCIUM_BROMIDE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.CRUDE_OIL, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.GLUE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.HYDROGEN_PEROXIDE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.IRON_SULFIDE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.LATEX, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.LITHIUM_HYDRIDE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.LUMINOL, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.LYE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.MAGNESIUM_NITRATE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.MAGNESIUM_OXIDE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.POLYETHYLENE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.POTASSIUM_IODIDE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.SOAP, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.SODIUM_ACETATE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.SODIUM_FLUORIDE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.SODIUM_HYDRIDE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.SODIUM_HYPOCHLORITE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.SODIUM_OXIDE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.SULFATE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.SALT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.CALCIUM_CHLORIDE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.CERIUM_CHLORIDE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.MERCURIC_CHLORIDE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.POTASSIUM_CHLORIDE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.TUNGSTEN_CHLORIDE, ModelTemplates.FLAT_ITEM);
 	}
 
 	@Override
