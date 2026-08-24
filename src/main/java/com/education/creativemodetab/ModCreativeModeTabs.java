@@ -25,6 +25,7 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.ICE_BOMB);
                 output.accept(ModItems.RAPID_FERTILIZER);
                 output.accept(ModBlocks.HEAT_BLOCK.asItem());
+                output.accept(ModItems.UNDERWATER_TORCH);
                 output.accept(ModBlocks.ELEMENT_UNKNOWN.asItem());
                 output.accept(ModBlocks.ELEMENT_H.asItem());
                 output.accept(ModBlocks.ELEMENT_HE.asItem());
