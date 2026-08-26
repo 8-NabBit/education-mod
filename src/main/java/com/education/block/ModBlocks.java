@@ -180,10 +180,6 @@ public class ModBlocks {
 		return Registry.register(BuiltInRegistries.BLOCK, id, block);
 	}
 
-    private static Block register(final BlockItemId id, final BlockBehaviour.Properties properties) {
-		return register(id.block(), properties);
-	}
-
 	public static Block register(final ResourceKey<Block> id, final BlockBehaviour.Properties properties) {
 		return register(id, Block::new, properties);
 	}
