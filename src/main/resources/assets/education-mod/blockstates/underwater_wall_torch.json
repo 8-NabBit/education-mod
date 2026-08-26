@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "education-mod:block/underwater_wall_torch"
+    },
+    "facing=north": {
+      "model": "education-mod:block/underwater_wall_torch",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "education-mod:block/underwater_wall_torch",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "education-mod:block/underwater_wall_torch",
+      "y": 180
+    }
+  }
+}

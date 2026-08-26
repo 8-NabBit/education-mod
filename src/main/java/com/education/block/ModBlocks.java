@@ -2,11 +2,16 @@ package com.education.block;
 import java.util.function.Function;
 
 import com.education.JavaEducation;
+
 import com.education.block.chemicalheat.ChemicalHeat;
+import com.education.block.UnderwaterTorchBlock.UnderwaterTorchBlock;
+import com.education.block.UnderwaterWallTorchBlock.UnderwaterWallTorchBlock;
 
 import net.minecraft.core.Registry;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.references.BlockItemId;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
@@ -14,11 +19,24 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.PushReaction;
 
 
 public class ModBlocks {
     public static final Block CHEMICAL_HEAT = registerBlock("chemical_heat", properties -> new ChemicalHeat(properties.strength(2.5f)
         .requiresCorrectToolForDrops().sound(SoundType.STONE).randomTicks().noOcclusion()));
+
+    public static final Block UNDERWATER_TORCH = register(
+        ModBlockItemIds.UNDERWATER_TORCH,
+        properties -> new UnderwaterTorchBlock(ParticleTypes.FLAME, properties),
+        BlockBehaviour.Properties.of().noCollision().instabreak().lightLevel(statex -> 14).sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY)
+    );
+
+    public static final Block UNDERWATER_WALL_TORCH = register(
+        ModBlockIds.UNDERWATER_WALL_TORCH,
+        properties -> new UnderwaterWallTorchBlock(ParticleTypes.FLAME, properties),
+        wallVariant(UNDERWATER_TORCH, true).noCollision().instabreak().lightLevel(statex -> 14).sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY)
+    );
 
     public static final Block ELEMENT_UNKNOWN = registerBlock("element_unknown", properties -> new Block(properties));
     public static final Block ELEMENT_H =  registerBlock("element_h",  properties -> new Block(properties));
@@ -152,6 +170,28 @@ public class ModBlocks {
             new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix()
                 .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(JavaEducation.MOD_ID, name)))));
     }
+
+    private static Block register(final BlockItemId id, final Function<BlockBehaviour.Properties, Block> factory, final BlockBehaviour.Properties properties) {
+		return register(id.block(), factory, properties);
+	}
+
+    public static Block register(final ResourceKey<Block> id, final Function<BlockBehaviour.Properties, Block> factory, final BlockBehaviour.Properties properties) {
+		Block block = factory.apply(properties.setId(id));
+		return Registry.register(BuiltInRegistries.BLOCK, id, block);
+	}
+
+	public static Block register(final ResourceKey<Block> id, final BlockBehaviour.Properties properties) {
+		return register(id, Block::new, properties);
+	}
+
+    private static BlockBehaviour.Properties wallVariant(final Block standingBlock, final boolean copyName) {
+		BlockBehaviour.Properties wallProperties = BlockBehaviour.Properties.of().overrideLootTable(standingBlock.getLootTable());
+		if (copyName) {
+			wallProperties = wallProperties.overrideDescription(standingBlock.getDescriptionId());
+		}
+
+		return wallProperties;
+	}
     
     public static void registerModBlocks() {
         JavaEducation.LOGGER.info("Registering Mod Blocks for " + JavaEducation.MOD_ID);
