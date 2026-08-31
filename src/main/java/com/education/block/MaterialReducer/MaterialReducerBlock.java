@@ -1,4 +1,4 @@
-package com.education.block.MaterialReducer;
+package com.education.block.materialreducer;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
@@ -33,5 +33,3 @@ public class MaterialReducerBlock extends Block {
     
 
 }
-
-

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "education-mod:block/mr_front",
-    "north": "education-mod:block/mr_front",
-    "south": "education-mod:block/mr_side",
-    "east": "education-mod:block/mr_side",
-    "west": "education-mod:block/mr_side",
-    "up": "education-mod:block/mr_top",
-    "down": "education-mod:block/mr_bottom"
+    "particle": "education-mod:block/material_reducer_front",
+    "north": "education-mod:block/material_reducer_front",
+    "south": "education-mod:block/material_reducer_side",
+    "east": "education-mod:block/material_reducer_side",
+    "west": "education-mod:block/material_reducer_side",
+    "up": "education-mod:block/material_reducer_top",
+    "down": "education-mod:block/material_reducer_bottom"
   }
 }
