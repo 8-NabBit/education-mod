@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "education-mod:block/chemical_heat",
+    "outer": "education-mod:block/chemical_heat",
+    "inner": "education-mod:block/chemical_heat"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "down":  { "texture": "#outer" },
+        "up":    { "texture": "#outer" },
+        "north": { "texture": "#outer" },
+        "south": { "texture": "#outer" },
+        "west":  { "texture": "#outer" },
+        "east":  { "texture": "#outer" }
+      }
+    },
+    {
+      "from": [1.5, 1.5, 1.5],
+      "to": [14.5, 14.5, 14.5],
+      "faces": {
+        "down":  { "texture": "#inner" },
+        "up":    { "texture": "#inner" },
+        "north": { "texture": "#inner" },
+        "south": { "texture": "#inner" },
+        "west":  { "texture": "#inner" },
+        "east":  { "texture": "#inner" }
+      }
+    }
+  ]
+}

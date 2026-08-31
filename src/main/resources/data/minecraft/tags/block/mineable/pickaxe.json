@@ -1,7 +1,11 @@
 {
   "replace": false,
   "values": [
+<<<<<<< HEAD
     "education-mod:heat_block",
     "education-mod:material_reducer"
+=======
+    "education-mod:chemical_heat"
+>>>>>>> main
   ]
 }

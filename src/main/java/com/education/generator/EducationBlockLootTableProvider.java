@@ -1,6 +1,7 @@
 package com.education.generator;
 
 import com.education.block.ModBlocks;
+import com.education.item.ModItems;
 
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
@@ -14,6 +15,7 @@ public class EducationBlockLootTableProvider extends FabricBlockLootSubProvider 
 
 	@Override
 	public void generate() {
+		add(ModBlocks.UNDERWATER_TORCH, createSingleItemTable(ModItems.UNDERWATER_TORCH));
 		dropSelf(ModBlocks.ELEMENT_UNKNOWN);
 		dropSelf(ModBlocks.ELEMENT_H);
 		dropSelf(ModBlocks.ELEMENT_HE);
